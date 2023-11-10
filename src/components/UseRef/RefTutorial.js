@@ -4,7 +4,7 @@ function RefTutorial() {
   const inputRef = useRef(null);
 
   const onClick = () => {
-    inputRef.current.value = '';
+    console.log(inputRef.current.value);
   };
   return (
     <div>

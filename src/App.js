@@ -11,7 +11,7 @@ import LayoutEffectTutorial from './components/UseLayoutEffect/LayoutEffectTutor
 function App() {
   return (
     <div className="App">
-      <MemoTutorial />
+      <CallBackTutorial />
     </div>
   );
 }

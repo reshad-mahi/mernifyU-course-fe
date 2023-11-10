@@ -12,7 +12,7 @@ function EffectTutorial() {
         setData(response.data[0].email);
         console.log('API WAS CALLED');
       });
-  }, []);
+  });
 
   return (
     <div>

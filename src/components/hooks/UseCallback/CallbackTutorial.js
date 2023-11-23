@@ -14,7 +14,7 @@ export default function CallBackTutorial() {
   );
 
   return (
-    <div className="App">
+    <div>
       <Child returnComment={returnComment} />
 
       <button

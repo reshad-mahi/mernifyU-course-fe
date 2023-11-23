@@ -1,17 +1,25 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import StateTutorial from './components/UseState/StateTutorial';
-import ReducerTutorial from './components/UseReducer/ReducerTutorial';
-import EffectTutorial from './components/UseEffect/EffectTutorial';
-import ContextTutorial from './components/UseContext/ContextTutorial';
-import RefTutorial from './components/UseRef/RefTutorial';
-import MemoTutorial from './components/UseMemo/MemoTutorial';
-import CallBackTutorial from './components/UseCallback/CallbackTutorial';
-import LayoutEffectTutorial from './components/UseLayoutEffect/LayoutEffectTutorial';
+
+import CallBackTutorial from './components/hooks/UseCallback/CallbackTutorial';
+import Home from './pages/Home';
+import Formpage from './pages/Formpage';
+import StateTutorial from './components/hooks/UseState/StateTutorial';
+import EffectTutorial from './components/hooks/UseEffect/EffectTutorial';
 
 function App() {
   return (
     <div className="App">
-      <CallBackTutorial />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}>
+            <Route path="new" element={<CallBackTutorial />}></Route>
+            <Route path="state" element={<StateTutorial />}></Route>
+            <Route path="effect" element={<EffectTutorial />}></Route>
+            <Route path="form" element={<Formpage />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

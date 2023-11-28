@@ -17,11 +17,14 @@ const CustomForm = ({ currentStep, questionList, register }) => {
           <label className="label-large text-left" htmlFor="email">
             {question.Question}
           </label>
+          {/* text input */}
           {question.response_Type === 'Short Answer' ? (
             <CustomInput register={register} question={question} />
-          ) : question.response_Type === 'Drop Down' ? (
+          ) : // select input
+          question.response_Type === 'Drop Down' ? (
             <CustomSelect register={register} question={question} />
-          ) : question.response_Type === 'radio' ? (
+          ) : // radio input... please make it reusable
+          question.response_Type === 'radio' ? (
             <div className="flex">
               <div className="flex items-center space-x-2 w-[60px]">
                 <input
@@ -42,7 +45,8 @@ const CustomForm = ({ currentStep, questionList, register }) => {
                 <label htmlFor="r2">No</label>
               </div>
             </div>
-          ) : question.response_Type === 'Integer' ? (
+          ) : // range input ... please make it reusable
+          question.response_Type === 'Integer' ? (
             <div className="h-[40px] rounded-md border border-input   bg-[#F6F2F7] px-3 flex gap-4 items-center">
               <span>0</span>
 
@@ -58,7 +62,8 @@ const CustomForm = ({ currentStep, questionList, register }) => {
               <output>{values[question.Variable]}</output>
               <span>100</span>
             </div>
-          ) : question.response_Type === 'Attachment' ? (
+          ) : // file input ... please make it reusable
+          question.response_Type === 'Attachment' ? (
             <input
               className="body-large mb-0"
               {...register(question.Variable, { required: true })}

@@ -12,6 +12,19 @@ const Home = () => {
           <Link to="effect" className="p-2 border-input border-2 ">
             useEffect
           </Link>
+          <Link to="layout" className="p-2 border-input border-2 ">
+            Layout
+          </Link>
+          <Link to="memo" className="p-2 border-input border-2 ">
+            Memo
+          </Link>
+          <Link to="reducer" className="p-2 border-input border-2 ">
+            Reduder
+          </Link>
+          <Link to="ref" className="p-2 border-input border-2 ">
+            Ref
+          </Link>
+
           <Link to="form" className="p-2 border-input border-2 ">
             Custom Form
           </Link>

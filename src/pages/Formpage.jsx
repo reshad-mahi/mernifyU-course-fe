@@ -8,7 +8,7 @@ import CustomForm from '../components/form/CustomForm';
 const Formpage = () => {
   const { register, handleSubmit, control } = useForm();
   const [questionList, setQuestionList] = useState();
-  const [currentStep, setCurrentStep] = useState(2);
+  const [currentStep, setCurrentStep] = useState(1);
 
   useEffect(() => {
     setQuestionList(data);
@@ -20,12 +20,12 @@ const Formpage = () => {
       setCurrentStep(currentStep + 1);
     }
     if (currentStep === 3) {
-      //   try {
-      //     const response = await axiosOpen.post('/', data);
-      //     console.log(response);
-      //   } catch (error) {
-      //     console.log(error);
-      //   }
+      try {
+        const response = await axiosOpen.get('/posts');
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 

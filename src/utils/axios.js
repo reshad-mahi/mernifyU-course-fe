@@ -1,7 +1,17 @@
 import axios from 'axios';
 
+const apiURL = 'https://jsonplaceholder.typicode.com';
+
+export const axiosOpen = axios.create({
+  baseURL: apiURL,
+  headers: {
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+  },
+});
+
 export const axiosSecure = axios.create({
-  baseURL: process.env.API_BASE_URL,
+  baseURL: apiURL,
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
@@ -9,21 +19,15 @@ export const axiosSecure = axios.create({
   },
 });
 
-export const axiosOpen = axios.create({
-  baseURL: 'https://fatimafytechapi.managedcoder.com',
-  headers: {
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
-  },
+// using interceptors
+
+export const axiosNonSecureInstance = axios.create({
+  baseURL: process.env.API_BASE_URL,
 });
 
 export const axiosSecureInstance = axios.create({
   baseURL: process.env.API_BASE_URL,
 });
-export const axiosNonSecureInstance = axios.create({
-  baseURL: process.env.API_BASE_URL,
-});
-
 axiosSecureInstance.interceptors.request.use(
   (config) => {
     const userToken = localStorage.userToken

@@ -24,9 +24,15 @@ const Home = () => {
           <Link to="ref" className="p-2 border-input border-2 ">
             Ref
           </Link>
-
           <Link to="form" className="p-2 border-input border-2 ">
             Custom Form
+          </Link>
+          <Link to="uncontrolled" className="p-2 border-input border-2 ">
+            uncontrolled
+          </Link>
+
+          <Link to="controlled" className="p-2 border-input border-2 ">
+            controlled
           </Link>
         </div>
       </div>

@@ -10,6 +10,8 @@ import LayoutEffectTutorial from './components/hooks/UseLayoutEffect/LayoutEffec
 import MemoTutorial from './components/hooks/UseMemo/MemoTutorial';
 import ReducerTutorial from './components/hooks/UseReducer/ReducerTutorial';
 import RefTutorial from './components/hooks/UseRef/RefTutorial';
+import Uncontrolled from './pages/Uncontrolled';
+import Controlled from './pages/Controlled';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
             <Route path="reducer" element={<ReducerTutorial />}></Route>
             <Route path="ref" element={<RefTutorial />}></Route>
             <Route path="form" element={<Formpage />}></Route>
+            <Route path="controlled" element={<Controlled />}></Route>
+            <Route path="uncontrolled" element={<Uncontrolled />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
